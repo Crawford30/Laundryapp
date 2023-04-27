@@ -4,6 +4,7 @@ import * as Location from 'expo-location';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 import Carousel from '../components/Carousel';
+import Services from '../components/Services';
 
 
 
@@ -109,6 +110,9 @@ const HomeScreen = () => {
 
             {/* Carousel Component */}
             <Carousel />
+
+            {/* Services Component */}
+            <Services />
 
 
 
