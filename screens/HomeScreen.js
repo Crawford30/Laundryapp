@@ -88,7 +88,7 @@ const HomeScreen = () => {
 
 
     return (
-        <SafeAreaView>
+        <SafeAreaView style={{ backgroundColor: "#F0F0F0", flex: 1 }}>
 
             {/* Location and Profile */}
             <View style={{ flexDirection: "row", alignItems: "center", padding: 10 }}>
