@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, SafeAreaView, Alert, Pressable, Image, TextInput } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, Alert, Pressable, Image, TextInput, ScrollView } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import * as Location from 'expo-location';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -88,7 +88,7 @@ const HomeScreen = () => {
 
 
     return (
-        <SafeAreaView style={{ backgroundColor: "#F0F0F0", flex: 1 }}>
+        <ScrollView style={{ backgroundColor: "#F0F0F0", flex: 1 }}>
 
             {/* Location and Profile */}
             <View style={{ flexDirection: "row", alignItems: "center", padding: 10 }}>
@@ -116,7 +116,7 @@ const HomeScreen = () => {
 
 
 
-        </SafeAreaView>
+        </ScrollView>
     )
 }
 
