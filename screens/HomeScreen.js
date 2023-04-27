@@ -1,7 +1,8 @@
-import { StyleSheet, Text, View, SafeAreaView, Alert, Pressable, Image } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, Alert, Pressable, Image, TextInput } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import * as Location from 'expo-location';
 import { MaterialIcons } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
 
 
 const HomeScreen = () => {
@@ -85,17 +86,25 @@ const HomeScreen = () => {
 
     return (
         <SafeAreaView>
+
+            {/* Location and Profile */}
             <View style={{ flexDirection: "row", alignItems: "center", padding: 10 }}>
                 <MaterialIcons name="location-on" size={30} color="#fd5c63" />
                 <View>
                     <Text style={{ fontSize: 18, fontWeight: "600" }}>Home</Text>
                     <Text>{displayCurrentAddress}</Text>
                 </View>
-
             </View>
             <Pressable style={{ marginLeft: "auto", marginRight: 7 }}>
                 <Image style={{ width: 40, height: 40, borderRadius: 20 }} source={{ uri: "https://lh3.googleusercontent.com/ogw/AOLn63E6EXErelWxXSUFxUiORVdmlsp-qjQWBmx6iCtqjg=s64-c-mo" }}></Image>
             </Pressable>
+
+            {/* Search Bar */}
+            <View style={{ padding: 10, margin: 10, flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderWidth: 0.8, borderColor: "#c0c0c0", borderRadius: 7 }}>
+                <TextInput placeholder="Search for item or more"></TextInput>
+                <Feather name="search" size={24} color="#fd5c63" />
+            </View>
+
 
         </SafeAreaView>
     )
